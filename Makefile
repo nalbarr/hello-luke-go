@@ -1,10 +1,14 @@
+PROJ=hello-luke-go
+SRC=main.go
+BIN=hello-luke-go
+
 all: run
 
 clean:
-	rm hello-luke-go
+	rm $(BIN)
 	
-build:
-	go build -o hello-luke-go
+build: $(SRC)
+	go build -o $(BIN)
 
 run: build
-	go run main.go
+	go run $(BIN)
